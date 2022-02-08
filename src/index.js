@@ -39,7 +39,7 @@ const MORSE_TABLE = {
 
 function decode(expr) {
   arr1 = expr.split('**********')
-  words = ''
+  words = []
   for (i in arr1){
     word = []
     nowArr = arr1[i].split('')
@@ -53,9 +53,9 @@ function decode(expr) {
         else nowLetter+='-'}
         word.push(MORSE_TABLE[nowLetter])
     }
-    words+=word.join('')+' '
+    words.push(word.join(''))
   }
-  return words - ' '
+  return words.join(' ')
 }
 
 module.exports = {
