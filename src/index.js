@@ -55,7 +55,7 @@ function decode(expr) {
     }
     words+=word.join('')+' '
   }
-  return words
+  return words - ' '
 }
 
 module.exports = {
